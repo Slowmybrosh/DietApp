@@ -4,5 +4,4 @@ Este repositorio ha sido creado con el fin de alojar el proyecto de la asignatur
 
 ## Descripción del proyecto
 
-En este proyecto se desarrollará un software que permitirá al usuario alquilar cualquier tipo de vehiculo disponible, ya sea con un conductor especializado en el caso de que el usuario no cuente con el permiso correspondiente para el tipo de vehiculo o bien sin un conductor para que sea el propio usuario el que se ponga a los mandos. Adicionalmente el propio cliente podrá decidir si publicar su viaje para que se unan más pasajeros y abaratar costes, permitiendo que cada pasajero tenga un destino diferente y se calcule la ruta más corta para completar el viaje.
-
+En este proyecto se desarrollará una plataforma "Deportiva" donde los usuarios serán capaces de registrarse (pagando una cuota mensual), con el objetivo de obtener consejos de un coach especializado en el deporte que busque practicar dicho usuario. Además la propia plataforma podrá calcular una dieta óptima para el usuario, en función del objetivo que quiera lograr (por ejemplo, ganar músculo o perder peso), esta dieta estará sujeta a supervisión de especialistas en nutrición. Por último también se ofertará una tienda online donde podrán comprar suplementos alimenticios (proteinas, sales minerales, etc...). 
