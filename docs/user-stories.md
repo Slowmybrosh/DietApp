@@ -2,20 +2,15 @@ En este archivo se describirán las historias de usuario relativas al proyecto d
 
 ## Usuarios
 
-- Cliente
-- Conductor
-- Gestor de Recursos humanos
+- Cliente: Usuario que se registra en la plataforma.
+- Especialista: Persona que supervisa el correcto desarrollo de la dieta, además de poder editarla en cualquier momento 
+- Analista de datos: Individuo que procesa los los datos obtenidos de los usuarios (de forma anónima).
 
 ---
 
 ## User-stories
 
- - [HU001](https://github.com/Slowmybrosh/PracticaIV/issues/3) Como cliente quiero poder mirar y comparar los diferentes vehiculos ofertados para elegir el que más se ajuste a mis necesidades
- - [HU002](https://github.com/Slowmybrosh/PracticaIV/issues/4) Como cliente quiero decidir si quiero conducir el vehículo yo mismo o contratar un chófer especializado de la empresa
- - [HU003](https://github.com/Slowmybrosh/PracticaIV/issues/5) Como cliente quiero poder compartir el vehiculo con otros pasajeros para abaratar los costes del viaje
- - [HU004](https://github.com/Slowmybrosh/PracticaIV/issues/6) Como cliente quiero llegar a mi destino de la manera más rápida posible aún compartiendo vehículo con otro pasajero
-
- - [HU005](https://github.com/Slowmybrosh/PracticaIV/issues/7) Como conductor quiero poder elegir cuando aceptar un cliente
-
- - [HU006](https://github.com/Slowmybrosh/PracticaIV/issues/8) Como gestor quiero ser capaz de analizar las necesidades de empleo en la empresa y contratar el mínimo número de conductores para máximizar los beneficios
- - [HU007](https://github.com/Slowmybrosh/PracticaIV/issues/9) Como gestor quiero ser capaz de recoger datos sobre los viajes de los clientes para ofrecer ofertas personalizadas para cada cliente
+ - [HU01](https://github.com/Slowmybrosh/PracticaIV/issues/11) Como cliente quiero poder obtener una dieta que se ajuste a mis necesidades.
+ - [HU02](https://github.com/Slowmybrosh/PracticaIV/issues/12) Como cliente quiero ser capaz de revisar mi dieta con un especialista.
+ - [HU03](https://github.com/Slowmybrosh/PracticaIV/issues/13) Como cliente quiero poder contactar con un especialista lo más rápido posible.
+ - [HU04](https://github.com/Slowmybrosh/PracticaIV/issues/14) Como analista quiero ser capaz de generar una serie de estadísticas con el fin de mejorar el alcance de la plataforma. 
