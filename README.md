@@ -1,7 +1,9 @@
 # Proyecto de Infraestructura Virtual
 
-Este repositorio ha sido creado con el fin de alojar el proyecto de la asignatura Infraestructura Virtual.
+Este repositorio ha sido creado con el fin de alojar el proyecto de la asignatura Infraestructura Virtual. Se usará el nombre de DietApp a la espera de encontrar uno mejor.
 
 ## Descripción del proyecto
 
-En este proyecto se desarrollará una plataforma que haga dietas para los usuarios de la misma, este servicio busca solventar los problemas que tienen algunas personas para llevar una dieta equilibrada, tambien puede servir para deportistas que busquen una dieta específica (como por ejemplo rica en proteínas). La lógica de negocio se basará en la suscripción a esta plataforma.
+La idea que se propone para este proyecto es una plataforma que haga dietas personalizadas para cada usuario. Tendremos diferentes tipos de usuario, desde usuarios que busquen llevar una dieta equilibrada hasta usuarios que quieran un plan alimenticio específico (por ejemplo un deportista de élite que busque una dieta rica en proteínas). La lógica de negocio de la plataforma se basará en el cálculo de las diversas dietas de los usuarios, planteandose así un problema similar al ya conocido [problema de la mochila] (https://es.wikipedia.org/wiki/Problema_de_la_mochila). 
+
+En conclusión, este servicio busca solventar la incertidumbre de los usuarios que busquen un cambio en sus costumbres alimenticias, ya sea por temas de salud o bien por un cambio en el estilo de vida del usuario.
