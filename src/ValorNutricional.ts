@@ -1,5 +1,6 @@
 class ValorNutricional{
     
+    private id: string;
     private kilojulios: number;
     private kilocalorias: number;
     private grasa: number;
@@ -13,10 +14,11 @@ class ValorNutricional{
     private fosforo: number;
     private potasio: number;
 
-    constructor(kilojulios: number, kilocalorias: number, grasa: number, proteinas: number,
-        fibra: number, sal: number, azucar: number, sodio: number, calcio: number, hierro: number,
-        fosforo: number,potasio: number) {
+    constructor(id?: string, kilojulios?: number, kilocalorias?: number, grasa?: number, proteinas?: number,
+        fibra?: number, sal?: number, azucar?: number, sodio?: number, calcio?: number, hierro?: number,
+        fosforo?: number,potasio?: number) {
 
+        this.id = id;
         this.kilojulios = kilojulios;
         this.kilocalorias = kilocalorias;
         this.grasa = grasa;
