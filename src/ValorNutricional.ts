@@ -33,51 +33,51 @@ class ValorNutricional {
         this.potasio = potasio;
     }
 
-    public getKilojulios(): number{
+    public getKilojulios():number{
         return this.kilojulios;
     }
 
-    public getKilocalorias(): number{
+    public getKilocalorias():number{
         return this.kilocalorias;
     }
 
-    public getGrasa(): number{
+    public getGrasa():number{
         return this.grasa;
     }
 
-    public getProteinas(): number{
+    public getProteinas():number{
         return this.proteinas;
     }
 
-    public getFibra(): number{
+    public getFibra():number{
         return this.fibra;
     }
 
-    public getSal(): number{
+    public getSal():number{
         return this.sal;
     }
 
-    public getAzucar(): number{
+    public getAzucar():number{
         return this.azucar;
     }
     
-    public getSodio(): number{
+    public getSodio():number{
         return this.sodio;
     }
 
-    public getCalcio(): number{
+    public getCalcio():number{
         return this.calcio;
     }
 
-    public getHierro(): number{
+    public getHierro():number{
         return this.hierro;
     }
 
-    public getFosforo(): number{
+    public getFosforo():number{
         return this.fosforo;
     }
 
-    public getPotasio(): number{
+    public getPotasio():number{
         return this.potasio;
     }
 
