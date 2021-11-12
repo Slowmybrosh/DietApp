@@ -1,18 +1,18 @@
 class ValorNutricional {
     
-    private id: string;
-    private kilojulios: number;
-    private kilocalorias: number;
-    private grasa: number;
-    private proteinas: number;
-    private fibra: number;
-    private sal: number;
-    private azucar: number;
-    private sodio: number;
-    private calcio: number;
-    private hierro: number;
-    private fosforo: number;
-    private potasio: number;
+    private id:string;
+    private kilojulios:number;
+    private kilocalorias:number;
+    private grasa:number;
+    private proteinas:number;
+    private fibra:number;
+    private sal:number;
+    private azucar:number;
+    private sodio:number;
+    private calcio:number;
+    private hierro:number;
+    private fosforo:number;
+    private potasio:number;
 
     constructor(id?: string, kilojulios?: number, kilocalorias?: number, grasa?: number, proteinas?: number,
         fibra?: number, sal?: number, azucar?: number, sodio?: number, calcio?: number, hierro?: number,
