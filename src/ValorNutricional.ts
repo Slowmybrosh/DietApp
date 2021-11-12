@@ -1,4 +1,4 @@
-class ValorNutricional {
+class ValorNutricional { 
     
     private id:string;
     private kilojulios:number;
