@@ -80,6 +80,5 @@ class ValorNutricional {
     public getPotasio():number{
         return this.potasio;
     }
-    
 
 }
