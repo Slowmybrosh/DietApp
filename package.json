@@ -1,9 +1,12 @@
 {
   "name": "dietapp",
   "version": "0.0.3",
-  "description": "Añadir una descripción decente luego",
+  "description": "Sistema para la creación de dietas personalizadas",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check": "tsc --noEmit",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "postclean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
