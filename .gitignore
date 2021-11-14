@@ -3,6 +3,11 @@
 
 # Log file
 *.log
+logs
+npm-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # BlueJ files
 *.ctxt
@@ -24,3 +29,17 @@ hs_err_pid*
 
 # Dependency directories
 node_modules/
+jspm_packages/
+
+# Optional npm cache
+.npm
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+#macOS Junk files
+.DS_Store
+.Spotlight-V100
+._*
+.Trashes
+.LSOverride
