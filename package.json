@@ -1,0 +1,18 @@
+{
+  "name": "dietapp",
+  "version": "0.0.3",
+  "description": "Añadir una descripción decente luego",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Slowmybrosh/DietApp.git"
+  },
+  "author": "Alejandro Olivares del Rey Pierres",
+  "license": "GLP-3.0",
+  "bugs": {
+    "url": "https://github.com/Slowmybrosh/DietApp/issues"
+  },
+  "homepage": "https://github.com/Slowmybrosh/DietApp#readme.md"
+}
