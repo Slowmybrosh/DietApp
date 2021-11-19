@@ -1,2 +1,5 @@
 lenguaje: typescript
 entidad: src/ValorNutricional.ts
+automatizar:
+  fichero: package.json
+  orden: npm run

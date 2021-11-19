@@ -1,0 +1,21 @@
+{
+  "name": "dietapp",
+  "version": "0.0.3",
+  "description": "Sistema para la creación de dietas personalizadas",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "postclean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Slowmybrosh/DietApp.git"
+  },
+  "author": "Alejandro Olivares del Rey Pierres",
+  "license": "GLP-3.0",
+  "bugs": {
+    "url": "https://github.com/Slowmybrosh/DietApp/issues"
+  },
+  "homepage": "https://github.com/Slowmybrosh/DietApp#readme.md"
+}
