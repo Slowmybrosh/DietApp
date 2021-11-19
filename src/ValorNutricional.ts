@@ -17,35 +17,35 @@ export class ValorNutricional {
                 this.kilojulios = kilojulios;
             }
             else{
-                throw new Error('Los kilojulios no pueden estar vacíos');
+                throw new Error_VN('El valor de kilojulios no ser negativo');
             }
     
             if(grasa >= 0){
                 this.grasa = grasa;
             }
             else{
-                throw new Error('La grasa no puede estar vacía');
+                throw new Error_VN('El valor de grasa no ser negativo');
             }
     
             if(proteinas >= 0){
                 this.proteinas = proteinas;
             }
             else{
-                throw new Error('Las proteinas no pueden estar vacías');
+                throw new Error_VN('El valor de proteinas no puede ser negativo');
             }
     
             if(fibra >= 0){
                 this.fibra = fibra;
             }
             else{
-                throw new Error('La fibra no puede estar vacía');
+                throw new Error_VN('El valor de fibra no ser negativo');
             }
 
             if(carbohidratos >=0){
                 this.carbohidratos = carbohidratos;
             }
             else{
-                throw new Error('Los carbohidratos no pueden ser de tipo "undefined"')
+                throw new Error_VN('El valor de carbohidratos no ser negativo');
             }
     }
 
