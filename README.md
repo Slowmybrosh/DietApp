@@ -16,6 +16,8 @@ En conclusión, este servicio busca solventar la incertidumbre de los usuarios q
     >npm run build
 - Limpiar los ficheros creados al construir:
     >npm run clean
+- Ejecutar tests
+    >npm run test
 
 ## Documentación adicional
 
