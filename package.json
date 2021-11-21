@@ -1,6 +1,6 @@
 {
   "name": "dietapp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sistema para la creación de dietas personalizadas",
   "scripts": {
     "check": "tsc --noEmit",
