@@ -21,3 +21,14 @@ Las ventajas de usar NPM como un gestor de tareas son:
 - Podemos establecer un conjunto de variables que se usaran en las tareas
 
 Estas dos ventajas son las más interesantes de cara al uso de NPM como gestor de tareas para el proyecto.
+
+# Framework de test
+---
+Existen bastantes frameworks para ejecutar los test sobre el proyecto que se está desarrollando, investigando un poco podemos ver algunos como: Jest, Mocha e Intern. 
+
+Cada framework tiene sus propias ventajas y desventajas, pero usaremos Jest que se ajusta a las necesidades del proyecto, ya que este no va a ser muy grande.
+
+para instalar Jest usaremos el comando:
+>npm install jest @types/jest ts-jest typescript -D
+
+El comando usado anteriormente instala además un módulo que contiene las definidiones de tipos de Jest
