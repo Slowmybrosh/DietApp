@@ -1,20 +1,17 @@
 import { Error_VN } from "./errores";
 
 export class ValorNutricional { 
-    
-    private id:string;
-    private kilojulios:number;
+
+    private kilocalorias:number;
     private grasa:number;
     private proteinas:number;
     private fibra:number;
     private carbohidratos:number;
 
-    constructor(id: string, kilojulios = 0, grasa = 0, proteinas = 0, fibra = 0, carbohidratos = 0) {
-
-            this.id = id;
+    constructor(kilocalorias = 0, grasa = 0, proteinas = 0, fibra = 0, carbohidratos = 0) {
         
-            if(kilojulios >= 0){
-                this.kilojulios = kilojulios;
+            if(kilocalorias >= 0){
+                this.kilocalorias = kilocalorias;
             }
             else{
                 throw new Error_VN('El valor de kilojulios no ser negativo');
@@ -49,8 +46,8 @@ export class ValorNutricional {
             }
     }
 
-    public getKilojulios():number{
-        return this.kilojulios;
+    public getKilocalorias():number{
+        return this.kilocalorias;
     }
 
     public getGrasa():number{
