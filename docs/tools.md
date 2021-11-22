@@ -24,9 +24,11 @@ Estas dos ventajas son las más interesantes de cara al uso de NPM como gestor d
 
 # Framework de test
 ---
-Existen bastantes frameworks para ejecutar los test sobre el proyecto que se está desarrollando, investigando un poco podemos ver algunos como: Jest, Mocha e Intern. 
+Existen bastantes frameworks para ejecutar los test sobre el proyecto que se está desarrollando, investigando un poco podemos ver algunos como: [Jest](https://jestjs.io/es-ES/), [Mocha](https://mochajs.org/) e [Intern](https://theintern.io/). 
 
-Cada framework tiene sus propias ventajas y desventajas, pero usaremos Jest que se ajusta a las necesidades del proyecto, ya que este no va a ser muy grande.
+Cada framework tiene sus propias ventajas y desventajas, pero usaremos Jest, ya que es el más sencillo de instalar y aunque tenga menos herramientas disponibles que Mocha, tiene las que usaremos en el proyecto.
+
+Por otra parte en el caso de Mocha tendremos que instalar la librería "Mocha.js" y "Chai.js", siendo esta última la que contiene las aserciones: expect, assert y should. Además se investigó la posibilidad de usar Intern como framework para ejecutar los test, pero este tiene poca documentación sobre su uso.
 
 para instalar Jest usaremos el comando:
 >npm install jest @types/jest ts-jest typescript -D
