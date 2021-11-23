@@ -1,5 +1,9 @@
 import { Error_VN } from "./errores";
 
+/**
+ * Clase que contiene los valores nutricionales para las dietas
+ * @public
+ */
 export class ValorNutricional { 
 
     private kilocalorias:number;
