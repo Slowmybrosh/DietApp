@@ -15,7 +15,7 @@ export class Error_VN extends Error{
 }
 
 /**
- * Clase para gestionar los errores en Dieta.ts
+ * Clase para gestionar los errores en la clase Dieta
  * @public
  */
 export class Error_Dieta extends Error{
