@@ -3,7 +3,7 @@ import { Tipo_actividad } from "./tipo_actividad";
 import { Tipo_dieta } from "./tipo_dieta";
 
 /**
- * Clase para guardar la dieta del usuario
+ * Clase para guardar el plan de la dieta del usuario
  * @public
  */
 export class Dieta{
