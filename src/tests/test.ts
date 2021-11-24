@@ -135,7 +135,9 @@ describe('Clase Dieta', () =>{
     })
 
     it('Comprobar getters', () =>{
+        let expected = (10*75)+(6.25*190)- (5*21) + 5
         expect(eliteEquilibrada.getActividad()).toBe(Tipo_actividad.ELITE)
         expect(eliteEquilibrada.getObjetivo()).toBe(Tipo_dieta.EQUILIBRADA)
+        expect(eliteEquilibrada.getRecomendadas()).toBe(expected*1.9)
     })
 });
