@@ -1,7 +1,7 @@
 import { Error_VN } from "./errores";
 
 /**
- * Clase que contiene los valores nutricionales para las dietas
+ * Clase que contiene los valores nutricionales para los alimetos de la dieta
  * @public
  */
 export class ValorNutricional { 
