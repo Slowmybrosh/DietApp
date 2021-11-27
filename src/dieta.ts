@@ -6,7 +6,7 @@ import { Tipo_dieta } from "./tipo_dieta";
  * Clase para guardar el plan de la dieta del usuario
  * @public
  */
-export class Dieta{
+export class Dieta {
     private caloriasRecomendadas: number;
     private objetivo: Tipo_dieta;
     private actividad: Tipo_actividad;
@@ -41,22 +41,6 @@ export class Dieta{
         else{
             TMB = (10*peso)+(6.25*altura)-(5*edad)-161;
         }
-
-        // if(actividad == Tipo_actividad.SEDENTARIO){
-        //     TMB *= 1.2;
-        // }
-        // else if (actividad == Tipo_actividad.LIGERO){
-        //     TMB *= 1.375;
-        // }
-        // else if (actividad == Tipo_actividad.MODERADO){
-        //     TMB *= 1.55;
-        // }
-        // else if (actividad == Tipo_actividad.REGULAR){
-        //     TMB *= 1.725;
-        // }
-        // else if (actividad == Tipo_actividad.ELITE){
-        //     TMB *= 1.9;
-        // }
 
         TMB *= this.ActivityMap[actividad];
 
