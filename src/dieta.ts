@@ -10,6 +10,13 @@ export class Dieta{
     private caloriasRecomendadas: number;
     private objetivo: Tipo_dieta;
     private actividad: Tipo_actividad;
+    private ActivityMap: Record<Tipo_actividad,number> = {
+        [Tipo_actividad.SEDENTARIO]: 1.2,
+        [Tipo_actividad.LIGERO]: 1.375,
+        [Tipo_actividad.MODERADO]: 1.55,
+        [Tipo_actividad.REGULAR]: 1.725,
+        [Tipo_actividad.ELITE]: 1.9,
+    };
 
     constructor(edad:number, altura:number, peso:number,sexo:string, actividad:Tipo_actividad, objetivo:Tipo_dieta){
         this.objetivo = objetivo;
@@ -35,21 +42,23 @@ export class Dieta{
             TMB = (10*peso)+(6.25*altura)-(5*edad)-161;
         }
 
-        if(actividad == Tipo_actividad.SEDENTARIO){
-            TMB *= 1.2;
-        }
-        else if (actividad == Tipo_actividad.LIGERO){
-            TMB *= 1.375;
-        }
-        else if (actividad == Tipo_actividad.MODERADO){
-            TMB *= 1.55;
-        }
-        else if (actividad == Tipo_actividad.REGULAR){
-            TMB *= 1.725;
-        }
-        else if (actividad == Tipo_actividad.ELITE){
-            TMB *= 1.9;
-        }
+        // if(actividad == Tipo_actividad.SEDENTARIO){
+        //     TMB *= 1.2;
+        // }
+        // else if (actividad == Tipo_actividad.LIGERO){
+        //     TMB *= 1.375;
+        // }
+        // else if (actividad == Tipo_actividad.MODERADO){
+        //     TMB *= 1.55;
+        // }
+        // else if (actividad == Tipo_actividad.REGULAR){
+        //     TMB *= 1.725;
+        // }
+        // else if (actividad == Tipo_actividad.ELITE){
+        //     TMB *= 1.9;
+        // }
+
+        TMB *= this.ActivityMap[actividad];
 
         if(objetivo == Tipo_dieta.REDUCIR){
             TMB -= (TMB * (15/100));
