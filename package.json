@@ -7,7 +7,9 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "postclean": "rm -rf dist",
-    "test": "jest"
+    "test": "jest",
+    "docker:build": "docker build -t slowmybrosh/dietapp .",
+    "docker:run": "docker run -t -v `pwd`:/app/test slowmybrosh/dietapp"
   },
   "repository": {
     "type": "git",
