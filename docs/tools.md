@@ -34,3 +34,12 @@ para instalar Jest usaremos el comando:
 >npm install jest @types/jest ts-jest typescript -D
 
 El comando usado anteriormente instala además un módulo que contiene las definidiones de tipos de Jest
+
+# Docker
+---
+
+Para probar los contenedores de manera aislada, construiremos una imagen de docker que tenga la configuración necesaria para lanzar dichos test.
+
+Usaremos una base con `node:17-alpine`. Ya que la versión 17 es la última version soportada por docker y la variante 'alpine' tiene otras ventajas destacadas. La que más influye en la toma de decisión para usar dicha versión es que ocupa menos espacio.
+
+Por otra parte se automatizará la subida de una imagen actualizada mediante una github action, además de otra action que permita la sincronización del fichero README.md en el repositorio de Docker, buscando en el 'Marketplace' de actions en github se ha encontrado una [herramienta](https://github.com/marketplace/actions/docker-hub-readme-description-sync) que permite actualizar el README de manera sencilla.
