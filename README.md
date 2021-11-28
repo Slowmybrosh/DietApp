@@ -18,6 +18,10 @@ En conclusión, este servicio busca solventar la incertidumbre de los usuarios q
     >npm run clean
 - Ejecutar tests
     >npm run test
+- Construir imagen Docker:
+    >npm run docker:build
+- Ejecutar imagen Docker:
+    >npm run docker:run
 
 ## Documentación adicional
 
