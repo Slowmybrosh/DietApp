@@ -7,11 +7,11 @@ on:
 
 jobs:
   update-README:
-  runs-on: ubuntu-20.04
-  steps:
-    - uses: actions/checkout@master
-    - uses: meeDamian/sync-readme@v1.0.6
-      with:
-        user: ${{ DOCKER_USER }}
-        pass: ${{ DOCKER_PASS }}
-        description: true
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@master
+      - uses: meeDamian/sync-readme@v1.0.6
+        with:
+          user: ${{ DOCKER_USER }}
+          pass: ${{ DOCKER_PASS }}
+          description: true
