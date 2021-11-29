@@ -9,9 +9,12 @@ jobs:
   update-README:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@master
-      - uses: meeDamian/sync-readme@v1.0.6
+      - name: Check code
+        uses: actions/checkout@master
+        
+      - name: Update README      
+        uses: meeDamian/sync-readme@v1.0.6
         with:
-          user: ${{ DOCKER_USER }}
-          pass: ${{ DOCKER_PASS }}
+          username: ${{secrets.DOCKER_USER}}
+          password: ${{secrets.DOCKER_PASS}}
           description: true
