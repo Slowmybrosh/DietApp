@@ -55,3 +55,12 @@ Para su configuración se ha creado el archivo `.travis.yml`, donde se especific
 
 Una de las desventajas de Travis es que actualmente tienes que introducir un método de pago para poder acceder a la prueba gratuita, otorgando solo 10000 créditos durante un mes. Después de ese mes, se deberá comprar una suscripción.
 
+## Circle CI
+
+La segunda herramienta de integración continua que usaremos es CircleCI, que permite su uso gratuito (sin tener que meter un método de pago como ocurría con Travis)
+
+Para su configuración se ha creado la carpeta `.circleci` que contiene el fichero de configuración para la herramienta. 
+
+Se ha elegido como segundo sistema de integración porque es sencillo de usar y tiene bastante documentación útil. Además como se mencionaba anteriormente si que es 'gratis', ofreciendo muchos más creditos que Travis. Y aparentemente gasta menos de estos creditos en comparación a otras herramientas de integración continua.
+
+Para su configuración se ha elegido la imagen `ubuntu-2004:202010-01`, ya que es la que se recomienda usar en la documentación de CircleCI. Dicha imagen tiene instalados: Ubuntu 20.04, docker y docker-compose. Teniendo justo las herramientas que necesitaremos. 
