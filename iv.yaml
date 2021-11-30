@@ -4,3 +4,4 @@ automatizar:
   fichero: package.json
   orden: npm run
 test: src/tests/test.ts
+CI: .circleci/config.yml
