@@ -61,6 +61,8 @@ La segunda herramienta de integración continua que usaremos es CircleCI, que pe
 
 Para su configuración se ha creado la carpeta `.circleci` que contiene el fichero de configuración para la herramienta. 
 
-Se ha elegido como segundo sistema de integración porque es sencillo de usar y tiene bastante documentación útil. Además como se mencionaba anteriormente si que es 'gratis', ofreciendo muchos más creditos que Travis. Y aparentemente gasta menos de estos creditos en comparación a otras herramientas de integración continua.
+Se ha elegido como segundo sistema de integración porque es sencillo de usar y tiene bastante documentación útil. Además como se mencionaba anteriormente si que es 'gratis', ofreciendo muchos más creditos que Travis. Y aparentemente gasta menos de estos creditos en comparación a otras herramientas de integración continua. 
+
+Otra de las ventajas que existen con CircleCI es que tiene un editor de configuración integrado en la aplicación web, permitiendo así solventar los posibles fallos que pueda haber al subir por primera vez dicha configuración, o al cambiarla. 
 
 Para su configuración se ha elegido la imagen `ubuntu-2004:202010-01`, ya que es la que se recomienda usar en la documentación de CircleCI. Dicha imagen tiene instalados: Ubuntu 20.04, docker y docker-compose. Teniendo justo las herramientas que necesitaremos. 
