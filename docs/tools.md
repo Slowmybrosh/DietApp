@@ -43,3 +43,15 @@ Para probar los contenedores de manera aislada, construiremos una imagen de dock
 Usaremos una base con `node:17-alpine`. Ya que la versión 17 es la última version soportada por docker y la variante 'alpine' tiene otras ventajas destacadas. La que más influye en la toma de decisión para usar dicha versión es que ocupa menos espacio.
 
 Por otra parte se automatizará la subida de una imagen actualizada mediante una github action, además de otra action que permita la sincronización del fichero README.md en el repositorio de Docker, buscando en el 'Marketplace' de actions en github se ha encontrado una [herramienta](https://github.com/marketplace/actions/docker-hub-readme-description-sync) que permite actualizar el README de manera sencilla.
+
+# Integración Continua
+---
+
+## Travis
+
+uno de los sistemas de integración continua que se ha elegido es Travis CI, ya que es un sistema muy sencillo de configurar, además cuenta con integración en GitHub y tiene habilitado el uso de la API 'Checks' por defecto. 
+
+Para su configuración se ha creado el archivo `.travis.yml`, donde se especifica el lenguaje a usar. En este caso Nodejs en varias de sus versiones. Una de las versiones usadas es la versión '14', lanzada en Abril de 2020, que es la más antigua que se permite usar en Jest, el framework sobre el que se lanzan los test, y también se usa la última versión disponible. 
+
+Una de las desventajas de Travis es que actualmente tienes que introducir un método de pago para poder acceder a la prueba gratuita, otorgando solo 10000 créditos durante un mes. Después de ese mes, se deberá comprar una suscripción.
+
