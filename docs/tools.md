@@ -47,7 +47,7 @@ Por otra parte se automatizará la subida de una imagen actualizada mediante una
 # Integración Continua
 ---
 
-## Travis
+## Travis CI
 
 uno de los sistemas de integración continua que se ha elegido es Travis CI, ya que es un sistema muy sencillo de configurar, además cuenta con integración en GitHub y tiene habilitado el uso de la API 'Checks' por defecto. 
 
