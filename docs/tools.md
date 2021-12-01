@@ -47,11 +47,21 @@ Por otra parte se automatizará la subida de una imagen actualizada mediante una
 # Integración Continua
 ---
 
+Se han elegido Travis CI y CircleCI como sistemas de integración continua a usar en el proyecto, pero eso no significa que sean los unicos que existan. 
+
+En un primer lugar se barajó utilizar otros sistemas como: Jenkins o TeamCity.
+
+De las mayores ventajas de Jenkins es que es gratuito y cuenta con una gran comunidad sobre la que se apoya esta comunidad, ya que es de código abierto.
+
+Por otra parte se contempló la idea de utilizar TeamCity, que también ofrece una suscripción gratuita sin limitaciones en el número de builds que hacer y que cuenta con construcciones simultaneas en diferentes entornos. 
+
+En conclusión el motivo por el que se usaron las herramientas de Travis y CircleCI fue por su sencillez a la hora de crear las configuraciones de las builds y la gran cantidad de documentación que existe para dichas herramientas.
+
 ## Travis CI
 
 Uno de los sistemas de integración continua que se ha elegido es Travis CI, ya que es un sistema muy sencillo de configurar, además cuenta con integración en GitHub y tiene habilitado el uso de la API 'Checks' por defecto. 
 
-Para su configuración se ha creado el archivo `.travis.yml`, donde se especifica el lenguaje a usar. En este caso Nodejs en varias de sus versiones. Una de las versiones usadas es la versión '14', lanzada en Abril de 2020, que es la más antigua que se permite usar en Jest, el framework sobre el que se lanzan los test, y también se usa la última versión disponible. 
+Para su configuración se ha creado el archivo `.travis.yml`, donde se especifica el lenguaje a usar. En este caso Nodejs en varias de sus versiones. Una de las versiones usadas es la versión '14', lanzada en Abril de 2020, que es la más antigua que se permite usar en Jest, el framework sobre el que se lanzan los test, también se usa la última versión disponible, que actualmente es la versión 17 y la versión LTS más reciente que ahora mismo es la 16. 
 
 Una de las desventajas de Travis es que actualmente tienes que introducir un método de pago para poder acceder a la prueba gratuita, otorgando solo 10000 créditos durante un mes. Después de ese mes, se deberá comprar una suscripción.
 
