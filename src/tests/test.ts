@@ -4,6 +4,7 @@ import { ValorNutricional } from "../ValorNutricional";
 import { Dieta } from "../dieta";
 import { Tipo_actividad} from "../tipo_actividad";
 import { Tipo_dieta} from "../tipo_dieta";
+import { Config } from "../config";
 
 describe('Clase ValorNutricional', () => {
     it('Comprobar creación de ValorNutricional', () =>{
@@ -140,4 +141,13 @@ describe('Clase Dieta', () =>{
         expect(eliteEquilibrada.getObjetivo()).toBe(Tipo_dieta.EQUILIBRADA)
         expect(eliteEquilibrada.getRecomendadas()).toBe(expected*1.9)
     })
+});
+
+describe('Clase configuración', () =>{
+    let configuracion = new Config();
+
+    it('Comprobar getters', () =>{
+        expect(configuracion.getLog_dir()).toBe("./logs/logs.json")
+    })
+
 });
