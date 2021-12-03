@@ -1,9 +1,6 @@
 name: Updates container repository in DockerHub
 
-on: 
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   build-container:
