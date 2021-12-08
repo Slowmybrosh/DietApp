@@ -6,7 +6,6 @@ jobs:
        image: ubuntu-2004:202010-01
     steps:
       - checkout
-      - run: ls -la ../
       - run: chmod 777 -R .
       - run: docker run -t -v `pwd`:/app/test slowmybrosh/dietapp
 
