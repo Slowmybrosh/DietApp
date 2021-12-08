@@ -2,11 +2,11 @@ version: 2.1
 
 jobs:
   docker-test:
-    machine:
-       image: ubuntu-2004:202010-01
+    docker:
+       image: cimg/node:17.2.0
     steps:
       - checkout
-      - run: ls -la
+      - run: pwd
       - run: docker run -t -v `pwd`:/app/test slowmybrosh/dietapp
 
 workflows:
