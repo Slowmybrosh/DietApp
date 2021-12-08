@@ -142,13 +142,3 @@ describe('Clase Dieta', () =>{
         expect(eliteEquilibrada.getRecomendadas()).toBe(expected*1.9)
     })
 });
-
-describe('Clase configuración', () =>{
-    let configuracion = new Config();
-
-    it('Comprobar getters', () =>{
-        expect(configuracion.getLog_dir()).toBe("logs.json")
-        expect(configuracion.getLog_folder()).toBe("./logs/")
-    })
-
-});
