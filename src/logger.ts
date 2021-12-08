@@ -9,5 +9,5 @@ if(!fs.existsSync(Configuration.getLog_folder())){
 }
 
 const pino = require('pino')
-const dest = pino.destination(Configuration.getLog_dir())
+const dest = pino.destination(Configuration.getLog_folder()+Configuration.getLog_dir())
 export const logger = pino(dest)
