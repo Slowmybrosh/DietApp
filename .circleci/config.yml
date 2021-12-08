@@ -1,9 +1,9 @@
 version: 2.1
 
 jobs:
-  docker-test:
+  build:
     docker:
-       image: cimg/node:17.2.0
+      - image: cimg/node:17.2.0
     steps:
       - checkout
       - run: pwd
@@ -12,4 +12,4 @@ jobs:
 workflows:
   tests:
     jobs:
-      - docker-test
+      - build
