@@ -76,3 +76,29 @@ Se ha elegido como segundo sistema de integración porque es sencillo de usar y 
 Otra de las ventajas que existen con CircleCI es que tiene un editor de configuración integrado en la aplicación web, permitiendo así solventar los posibles fallos que pueda haber al subir por primera vez dicha configuración, o al cambiarla. 
 
 Para su configuración se ha elegido la imagen `ubuntu-2004:202010-01`, ya que es la que se recomienda usar en la documentación de CircleCI. Dicha imagen tiene instalados: Ubuntu 20.04, docker y docker-compose. Teniendo justo las herramientas que necesitaremos. 
+
+
+# Servicios esenciales en la nube
+---
+
+## Logger
+
+Un logger es esencialmente una utilidad que nos permitirá llevar un registro de las diferentes operaciones que se hacen en una aplicación. Con la característica de que si es una aplicación distribuida podremos ser conscientes de lo que ocurre en cada parte de la aplicación. 
+
+Para añadir esta funcionalidad al proyecto se han revisado algunos loggers para Typescript y Javascript (ambos lenguajes son compatibles). Uno de los loggers que se revisó fue 'Winston', pero no se consiguió terminar de configurar correctamente así que por simplicidad no se integró en el proyecto. Además su última actualización tiene un año de antigüedad. Pero tiene algunas utilidades interesantes como la posibilidad de usar diferentes formatos para el log, no solo JSON, y que puedes crear diferentes instancias del logger cada una con un nivel diferente. 
+
+Otro logger que se probó fue loglevel. Este es un logger minimalista con multitud de niveles, desde los niveles más bajos (Trace y Debug) hasta los más altos (Warn y Error). Su instalación es muy sencilla, se trata simplemente de instalarlo, importar el logger a los ficheros donde se necesite y echarlo a andar. El principal motivo por el que no se eligió es que no es capaz de mandar los registros en formato JSON a un fichero de manera sencilla. Se tendría que redirigir el flujo de datos desde la consola a un fichero. 
+
+Adicionalmente, se intentó integrar roarr que es un logger muy completo, parecido a Winston y con mucho potencial, pero no fui capaz de configurarlo completamente para mandar los registros a un fichero. Las ventajas de Roarr frente a Winston y Bunyan (otro logger que no se ha probado en este proyecto), es que no se necesita una configuración a nivel de programa, es decir, que no necesitamos instanciar el log en cada fichero donde lo usemos.
+
+Por último se hablará de Pino, el logger que se ha escogido entre los mencionados anteriormente. Tiene casi las mismas utilidades que Roarr o Winston, pero además incluye una serie de plugins como `pino-pretty` que permiten cambiar el estilo de los registros que aparecen en la consola. No se ha hecho uso de este plugin ya que se busca que los registros salgan en formato JSON, para su posterior procesado. También se hace uso de la posibilidad de crear hijos del logger, se ha usado un hijo del logger en cada clase. Además, por lo que parece se actualiza frecuentemente, la última actualización es del 1 de diciembre de 2021.
+
+## Configuración remota y variables de entorno
+
+Para la configuración remota se han probado dos herramientas: Etcd3 y Consul. Dada la dificultad para configurar consul (a nivel de cliente, ya que no se ha configurado un servidor), se ha escogido Etcd3. 
+
+Etcd3 permite mantener un control sobre las variables de entorno a nivel distribuido, cabe destacar que no se ha configurado un servidor y se está haciendo uso del cliente solamente. Esto obviamente hace que salte un error de conexión al servidor, que se ha gestionado haciendo uso de una tercera herramienta que guarda las variables de entorno en un fichero. 
+
+Esta utilidad es Dotenv, que permite salvar y recuperar (entre otras cosas) variables de entorno. Para este proyecto por ahora solo se recupera la variable 'LOG_DIR' que es el path donde se guardarán los registros del logger.
+
+Para esta parte del proyecto se ha creado una clase que permite configurar los diferentes aspectos de la aplicación. Por ahora solo se hace uso de esta clase configuración en la clase del logger.
