@@ -1,6 +1,9 @@
 import { Error_Dieta } from "./errores";
 import { Tipo_actividad } from "./tipo_actividad";
 import { Tipo_dieta } from "./tipo_dieta";
+import { logger } from "./logger";
+
+const child = logger.child({a: "Dieta"});
 
 /**
  * Clase para guardar el plan de la dieta del usuario
@@ -21,16 +24,25 @@ export class Dieta {
     constructor(edad:number, altura:number, peso:number,sexo:string, actividad:Tipo_actividad, objetivo:Tipo_dieta){
         this.objetivo = objetivo;
         this.actividad = actividad;
-        if(edad <= 0)
+        if(edad <= 0){
+            child.fatal("Edad negativa")
             throw new Error_Dieta("La edad no puede ser negativa o 0");
-        if(altura <= 0)
+        }
+        if(altura <= 0){
+            child.fatal("Altura negativa")
             throw new Error_Dieta("La altura no puede ser negativa o 0");
-        if(peso <= 0)
+        }
+        if(peso <= 0){
+            child.fatal("Peso negativo")
             throw new Error_Dieta("El peso no puede ser negativo o 0");
-        if(sexo.toUpperCase() != "M" && sexo.toUpperCase() != "F")
+        }
+        if(sexo.toUpperCase() != "M" && sexo.toUpperCase() != "F"){
+            child.fatal("El sexo del usuario es incorrecto")
             throw new Error_Dieta("El sexo del usuario debe ser M(hombre) o F(Mujer)");
+        }
 
         this.caloriasRecomendadas =  this.calcularRecomendadas(edad,altura,peso,sexo,actividad,objetivo)
+        child.info("Calculadas las calorias recomendadas")
     }
 
     private calcularRecomendadas(edad:number, altura:number, peso:number,sexo:string, actividad:Tipo_actividad, objetivo:Tipo_dieta):number{
