@@ -1,14 +1,21 @@
 import { Error_Config } from "./errores";
+import { Etcd3 } from "etcd3";
 require('dotenv').config({ path:'./config/enviroment.env'})
 
+const client = new Etcd3();
 
 export class Config {
-    private log_dir:string; 
+    private log_dir: any; 
     constructor(){
-        if(process.env.LOG_DIR != undefined)
-            this.log_dir = process.env.LOG_DIR;
-        else
-            throw new Error_Config("LOG_DIR no existe en el fichero variables")
+        (async () => {
+            this.log_dir = await client.get('LOG_DIR').string().catch(err =>{});
+        })();
+        if(this.log_dir == null && process.env.LOG_DIR != undefined){
+            this.log_dir = String(process.env.LOG_DIR);
+        }
+        else{
+            throw new Error_Config("Hay un problema con el fichero de configuración")
+        }
     }
 
     public getLog_dir():string{
