@@ -7,5 +7,4 @@ COPY package*.json ./
 RUN npm ci
 
 WORKDIR /app/test
-VOLUME /app/logs
 ENTRYPOINT ["npm", "run", "test"]
