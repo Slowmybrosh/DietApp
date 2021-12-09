@@ -1,6 +1,6 @@
 import { Error_Config } from "./errores";
 import { Etcd3 } from "etcd3";
-require('dotenv').config({ path:'./config/enviroment.env'})
+require('dotenv').config({ path:'./config/configuration.env'})
 
 const client = new Etcd3();
 
