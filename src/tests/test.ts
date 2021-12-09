@@ -147,6 +147,6 @@ describe('Clase configuracion', () =>{
     it('Comprobar getters', () =>{
         let configuracion = new Config();
         expect(configuracion.getLog_dir()).toBe('logs.json')
-        expect(configuracion.getLog_folder()).toBe('./logs/')
+        expect(configuracion.getLog_folder()).toBe('/tmp/log/')
     })    
 });
