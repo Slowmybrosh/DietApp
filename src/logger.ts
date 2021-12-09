@@ -5,7 +5,7 @@ import * as fs from 'fs';
 const Configuration = new Config()
 
 if(!fs.existsSync(Configuration.getLog_folder())){
-    fs.mkdirSync('/tmp/log/')
+    fs.mkdirSync(Configuration.getLog_folder());
 }
 
 const pino = require('pino')
