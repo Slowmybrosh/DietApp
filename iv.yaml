@@ -5,3 +5,4 @@ automatizar:
   orden: npm run
 test: src/tests/test.ts
 CI: .circleci/config.yml
+configuracion: src/config.ts
