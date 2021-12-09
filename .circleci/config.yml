@@ -3,10 +3,9 @@ version: 2.1
 jobs:
   docker-test:
     machine:
-       image: ubuntu-2004:202010-01
+      image: ubuntu-2004:202010-01
     steps:
       - checkout
-      - run: ls -la
       - run: docker run -t -v `pwd`:/app/test slowmybrosh/dietapp
 
 workflows:
