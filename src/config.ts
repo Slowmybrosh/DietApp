@@ -15,7 +15,7 @@ export class Config {
             this.log_dir = String(process.env.LOG_DIR);
         }
         else{
-            throw new Error_Config("Hay un problema con el fichero de configuración")
+            this.log_dir = 'logs.json';
         }
 
         (async () => {
@@ -25,7 +25,7 @@ export class Config {
             this.log_folder = String(process.env.LOG_FOLDER);
         }
         else{
-            throw new Error_Config("Hay un problema con el directorio de configuración")
+            this.log_folder = "/tmp/dietapp/";
         }
 
     }
