@@ -5,6 +5,7 @@ import { Dieta } from "../dieta";
 import { Tipo_actividad} from "../tipo_actividad";
 import { Tipo_dieta} from "../tipo_dieta";
 import { Config } from "../config";
+require('dotenv').config({ path:'../config/configuration.env'})
 
 describe('Clase ValorNutricional', () => {
     it('Comprobar creación de ValorNutricional', () =>{
@@ -146,7 +147,7 @@ describe('Clase Dieta', () =>{
 describe('Clase configuracion', () =>{
     it('Comprobar getters', () =>{
         let configuracion = new Config();
-        expect(configuracion.getLog_dir()).toBe('logs.json')
-        expect(configuracion.getLog_folder()).toBe('/tmp/log/')
+        expect(configuracion.getLog_dir()).toBe(process.env.LOG_DIR)
+        expect(configuracion.getLog_folder()).toBe(process.env.LOG_FOLDER)
     })    
 });
