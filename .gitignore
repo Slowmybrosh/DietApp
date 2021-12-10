@@ -3,6 +3,7 @@
 
 # Config folder
 config/
+.env
 
 # Log file
 *.log
