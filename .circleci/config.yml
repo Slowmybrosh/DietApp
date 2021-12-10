@@ -6,7 +6,7 @@ jobs:
       image: ubuntu-2004:202010-01
     steps:
       - checkout
-      - run: docker run -t -v `pwd`:/app/test slowmybrosh/dietapp -e LOG_DIR={$LOG_DIR} -e LOG_FOLDER={$LOG_FOLDER}
+      - run: docker run -e LOG_DIR=$LOG_DIR -e LOG_FOLDER=$LOG_FOLDER -t -v `pwd`:/app/test slowmybrosh/dietapp
 
 workflows:
   tests:
