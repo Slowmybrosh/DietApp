@@ -147,8 +147,8 @@ describe('Clase Dieta', () =>{
 describe('Clase configuracion', () =>{
     it('Comprobar getters enviroment', () =>{
         let configuracion = new Config();
-        if(process.env.LOG_DIR != undefined)
-            expect(configuracion.getLog_file()).toBe(process.env.LOG_DIR)
+        if(process.env.LOG_FILE != undefined)
+            expect(configuracion.getLog_file()).toBe(process.env.LOG_FILE)
         else
             expect(configuracion.getLog_file()).toBe('logs.json')
         
