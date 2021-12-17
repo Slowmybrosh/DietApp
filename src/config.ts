@@ -5,17 +5,17 @@ require('dotenv').config({ path:'./config/configuration.env'})
 const client = new Etcd3();
 
 export class Config {
-    private log_dir: any;
+    private log_file: any;
     private log_folder: any; 
     constructor(){
         (async () => {
-            this.log_dir = await client.get('LOG_DIR').string().catch(err =>{});
+            this.log_file = await client.get('LOG_FILE').string().catch(err =>{});
         })();
-        if(this.log_dir == null && process.env.LOG_DIR != undefined){
-            this.log_dir = String(process.env.LOG_DIR);
+        if(this.log_file == null && process.env.LOG_FILE != undefined){
+            this.log_file = String(process.env.LOG_FILE);
         }
         else{
-            this.log_dir = 'logs.json';
+            this.log_file = 'logs.json';
         }
 
         (async () => {
@@ -30,8 +30,8 @@ export class Config {
 
     }
 
-    public getLog_dir():string{
-        return this.log_dir;
+    public getLog_file():string{
+        return this.log_file;
     }
 
     public getLog_folder():string{

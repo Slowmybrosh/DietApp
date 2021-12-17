@@ -148,9 +148,9 @@ describe('Clase configuracion', () =>{
     it('Comprobar getters enviroment', () =>{
         let configuracion = new Config();
         if(process.env.LOG_DIR != undefined)
-            expect(configuracion.getLog_dir()).toBe(process.env.LOG_DIR)
+            expect(configuracion.getLog_file()).toBe(process.env.LOG_DIR)
         else
-            expect(configuracion.getLog_dir()).toBe('logs.json')
+            expect(configuracion.getLog_file()).toBe('logs.json')
         
         if(process.env.LOG_FOLDER != undefined)
             expect(configuracion.getLog_folder()).toBe(process.env.LOG_FOLDER)
