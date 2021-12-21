@@ -42,3 +42,16 @@ export class Error_Config extends Error{
         super(message);
     }
 }
+
+/**
+ * Clase para gestionar los errores del manejador
+ * @public
+ */
+export class Error_manejador extends Error{
+    /**
+     * Constructor de clase
+     */
+    constructor(message: string){
+        super(message);
+    }
+}

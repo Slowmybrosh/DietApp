@@ -1,7 +1,4 @@
-import { Error_VN } from "./errores";
-import { logger } from "./logger";
-
-const child = logger.child({a:'ValorNutricional'})
+import { Error_VN } from "../errores";
 
 /**
  * Clase que contiene los valores nutricionales para los alimetos de la dieta
@@ -21,7 +18,6 @@ export class ValorNutricional {
                 this.kilocalorias = kilocalorias;
             }
             else{
-                child.error("Valor kilocalorias incorrecto");
                 throw new Error_VN('El valor de kilocalorias no ser negativo');
             }
     
@@ -29,7 +25,6 @@ export class ValorNutricional {
                 this.grasa = grasa;
             }
             else{
-                child.error("Valor Grasa incorrecto")
                 throw new Error_VN('El valor de grasa no ser negativo');
             }
     
@@ -37,7 +32,6 @@ export class ValorNutricional {
                 this.proteinas = proteinas;
             }
             else{
-                child.error("Valor proteinas incorrecto")
                 throw new Error_VN('El valor de proteinas no puede ser negativo');
             }
     
@@ -45,7 +39,6 @@ export class ValorNutricional {
                 this.fibra = fibra;
             }
             else{
-                child.error("Valor fibra incorrecto")
                 throw new Error_VN('El valor de fibra no ser negativo');
             }
 
@@ -53,11 +46,8 @@ export class ValorNutricional {
                 this.carbohidratos = carbohidratos;
             }
             else{
-                child.error("Valor carbohidratos incorrecto")
                 throw new Error_VN('El valor de carbohidratos no ser negativo');
             }
-
-            child.info("Creado objeto de la clase ValorNutricional")
     }
 
     public getKilocalorias():number{
