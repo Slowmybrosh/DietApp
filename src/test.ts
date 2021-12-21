@@ -5,38 +5,40 @@ import { Dieta } from "./model/dieta";
 import { Tipo_actividad} from "./model/tipo_actividad";
 import { Tipo_dieta} from "./model/tipo_dieta";
 import { Config } from "./config";
+import { manejador } from "./manejador"
+import { Error_manejador } from "./errores";
 require('dotenv').config({ path:'../config/configuration.env'})
 
 describe('Clase ValorNutricional', () => {
     it('Comprobar creación de ValorNutricional', () =>{
         const negativeKilocalorias = () => {
-            new ValorNutricional(-5)
+            manejador.crear_valorNutricional(-5,0,0,0,0)
         };
-        expect(negativeKilocalorias).toThrow(Error_VN)
+        expect(negativeKilocalorias).toThrow(Error_manejador)
 
         const negativeGrasa = () => {
-            new ValorNutricional(0,-5)
+            manejador.crear_valorNutricional(0,-5,0,0,0)
         };
-        expect(negativeGrasa).toThrow(Error_VN)
+        expect(negativeGrasa).toThrow(Error_manejador)
 
         const negativeProteina = () => {
-            new ValorNutricional(0,0,-5)
+            manejador.crear_valorNutricional(0,0,-5,0,0)
         };
-        expect(negativeProteina).toThrow(Error_VN)
+        expect(negativeProteina).toThrow(Error_manejador)
 
         const negativefibra = () => {
-            new ValorNutricional(0,0,-5)
+            manejador.crear_valorNutricional(0,0,0,-5,0)
         };
-        expect(negativefibra).toThrow(Error_VN)
+        expect(negativefibra).toThrow(Error_manejador)
 
         const negativeCarbohidratos = () => {
-            new ValorNutricional(0,0,0,0,-5)
+            manejador.crear_valorNutricional(0,0,0,0,-5)
         };
-        expect(negativeCarbohidratos).toThrow(Error_VN)
+        expect(negativeCarbohidratos).toThrow(Error_manejador)
     })
 
     let valor: ValorNutricional
-    valor = new ValorNutricional(2500,168,657,34,300)
+    valor = manejador.crear_valorNutricional(2500,168,657,34,300)
 
     it('Comprobar getters', () =>{
         expect(valor.getKilocalorias()).toBe(2500)
@@ -50,41 +52,41 @@ describe('Clase ValorNutricional', () => {
 describe('Clase Dieta', () =>{
     it('Comprobar creacion de Dieta', () =>{
         const negativeEdad = () =>{
-            new Dieta(-5,180,78,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
+            manejador.crear_dieta("Slowmybrosh",-5,180,78,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
         };
-        expect(negativeEdad).toThrow(Error_Dieta)
+        expect(negativeEdad).toThrow(Error_manejador)
 
         const negativeAltura = () =>{
-            new Dieta(32,-5,78,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
+            manejador.crear_dieta("Slowmybrosh",32,-5,78,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
         };
-        expect(negativeAltura).toThrow(Error_Dieta)
+        expect(negativeAltura).toThrow(Error_manejador)
 
         const negativePeso = () =>{
-            new Dieta(32,180,-5,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
+            manejador.crear_dieta("Slowmybrosh",32,180,-5,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
         };
-        expect(negativePeso).toThrow(Error_Dieta)
+        expect(negativePeso).toThrow(Error_manejador)
 
         const wrongSexo = () =>{
-            new Dieta(32,180,75,"B",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
+            manejador.crear_dieta("Slowmybrosh",32,180,75,"B",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
         };
-        expect(wrongSexo).toThrow(Error_Dieta)
+        expect(wrongSexo).toThrow(Error_manejador)
     })
 
-    let sedentarioReducir = new Dieta(21,190,75,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.REDUCIR)
-    let sedentarioAumentar = new Dieta(21,190,75,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.AUMENTAR)
-    let sedentarioEquilibrada = new Dieta(21,190,75,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
-    let ligeroReducir = new Dieta(21,190,75,"M",Tipo_actividad.LIGERO,Tipo_dieta.REDUCIR)
-    let ligeroAumentar = new Dieta(21,190,75,"M",Tipo_actividad.LIGERO,Tipo_dieta.AUMENTAR)
-    let ligeroEquilibrada = new Dieta(21,190,75,"M",Tipo_actividad.LIGERO,Tipo_dieta.EQUILIBRADA)
-    let moderadoReducir = new Dieta(21,190,75,"M",Tipo_actividad.MODERADO,Tipo_dieta.REDUCIR)
-    let moderadoAumentar = new Dieta(21,190,75,"M",Tipo_actividad.MODERADO,Tipo_dieta.AUMENTAR)
-    let moderadoEquilibrada = new Dieta(21,190,75,"M",Tipo_actividad.MODERADO,Tipo_dieta.EQUILIBRADA)
-    let regularReducir = new Dieta(21,190,75,"M",Tipo_actividad.REGULAR,Tipo_dieta.REDUCIR)
-    let regularAumentar = new Dieta(21,190,75,"M",Tipo_actividad.REGULAR,Tipo_dieta.AUMENTAR)
-    let regularEquilibrada = new Dieta(21,190,75,"M",Tipo_actividad.REGULAR,Tipo_dieta.EQUILIBRADA)
-    let eliteReducir = new Dieta(21,190,75,"M",Tipo_actividad.ELITE,Tipo_dieta.REDUCIR)
-    let eliteAumentar = new Dieta(21,190,75,"M",Tipo_actividad.ELITE,Tipo_dieta.AUMENTAR)
-    let eliteEquilibrada = new Dieta(21,190,75,"M",Tipo_actividad.ELITE,Tipo_dieta.EQUILIBRADA)
+    let sedentarioReducir = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.REDUCIR)
+    let sedentarioAumentar = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.AUMENTAR)
+    let sedentarioEquilibrada = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.SEDENTARIO,Tipo_dieta.EQUILIBRADA)
+    let ligeroReducir = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.LIGERO,Tipo_dieta.REDUCIR)
+    let ligeroAumentar = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.LIGERO,Tipo_dieta.AUMENTAR)
+    let ligeroEquilibrada = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.LIGERO,Tipo_dieta.EQUILIBRADA)
+    let moderadoReducir = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.MODERADO,Tipo_dieta.REDUCIR)
+    let moderadoAumentar = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.MODERADO,Tipo_dieta.AUMENTAR)
+    let moderadoEquilibrada = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.MODERADO,Tipo_dieta.EQUILIBRADA)
+    let regularReducir = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.REGULAR,Tipo_dieta.REDUCIR)
+    let regularAumentar = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.REGULAR,Tipo_dieta.AUMENTAR)
+    let regularEquilibrada = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.REGULAR,Tipo_dieta.EQUILIBRADA)
+    let eliteReducir = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.ELITE,Tipo_dieta.REDUCIR)
+    let eliteAumentar = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.ELITE,Tipo_dieta.AUMENTAR)
+    let eliteEquilibrada = manejador.crear_dieta("Slowmybrosh",21,190,75,"M",Tipo_actividad.ELITE,Tipo_dieta.EQUILIBRADA)
 
     it('Comprobar calculo de calorias', () =>{
         let TMB = (10*75)+(6.25*190)- (5*21) + 5
