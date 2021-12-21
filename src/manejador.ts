@@ -10,7 +10,7 @@ class Manejador {
     private msg: string
 
     /**
-     * Constructor de clase
+     * Constructor de la clase manejador
      */
     constructor(){
         this.msg = ""
