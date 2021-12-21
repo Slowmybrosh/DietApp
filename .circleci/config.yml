@@ -6,7 +6,7 @@ jobs:
       image: ubuntu-2004:202010-01
     steps:
       - checkout
-      - run: docker run -e LOG_FILE=$LOG_FILE -e LOG_FOLDER=$LOG_FOLDER -t -v `pwd`:/app/test slowmybrosh/dietapp
+      - run: docker run -e LOG_FILE=$LOG_FILE -e LOG_FOLDER=$LOG_FOLDER -e FASTIFY_PORT=$FASTIFY_PORT -t -v `pwd`:/app/test slowmybrosh/dietapp
 
 workflows:
   tests:
