@@ -1,13 +1,13 @@
-import { Config } from "./config";
+import { configuration } from "./config";
 import * as fs from 'fs';
 
 
-const Configuration = new Config()
 
-if(!fs.existsSync(Configuration.getLog_folder())){
-    fs.mkdirSync(Configuration.getLog_folder());
+
+if(!fs.existsSync(configuration.getLog_folder())){
+    fs.mkdirSync(configuration.getLog_folder());
 }
 
 const pino = require('pino')
-const dest = pino.destination(Configuration.getLog_folder()+Configuration.getLog_file())
+const dest = pino.destination(configuration.getLog_folder()+configuration.getLog_file())
 export const logger = pino(dest)
