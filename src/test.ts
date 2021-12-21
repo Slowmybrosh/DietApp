@@ -4,7 +4,7 @@ import { ValorNutricional } from "./model/ValorNutricional";
 import { Dieta } from "./model/dieta";
 import { Tipo_actividad} from "./model/tipo_actividad";
 import { Tipo_dieta} from "./model/tipo_dieta";
-import { Config } from "./config";
+import { configuration } from "./config";
 import { manejador } from "./manejador"
 import { Error_manejador } from "./errores";
 require('dotenv').config({ path:'../config/configuration.env'})
@@ -148,7 +148,7 @@ describe('Clase Dieta', () =>{
 
 describe('Clase configuracion', () =>{
     it('Comprobar getters enviroment', () =>{
-        let configuracion = new Config();
+        let configuracion = configuration;
         if(process.env.LOG_FILE != undefined)
             expect(configuracion.getLog_file()).toBe(process.env.LOG_FILE)
         else
